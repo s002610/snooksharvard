@@ -67,7 +67,7 @@
   </macro>
   <macro name="title">
     <choose>
-      <if type="bill book graphic legal_case legislation motion_picture report song thesis" match="any">
+      <if type="bill book graphic legal_case legislation motion_picture report song thesis webpage" match="any">
         <text variable="title" font-style="italic"/>
       </if>
       <else>
@@ -133,9 +133,7 @@
     </sort>
     <layout suffix=".">
       <text macro="author"/>
-      <date variable="issued" prefix=" ">
-        <date-part name="year"/>
-      </date>
+      <text macro="year-date" prefix=" "/>
       <choose>
         <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
           <group prefix="" delimiter="">
@@ -187,4 +185,4 @@
       <text prefix=", " macro="access"/>
     </layout>
   </bibliography>
-</style>	
+</style>
